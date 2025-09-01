@@ -30,6 +30,7 @@ class Database {
             longitude REAL NOT NULL,
             stock_gaz INTEGER DEFAULT 0,
             prix_unite DECIMAL(10,2) DEFAULT 15.00,
+            active INTEGER DEFAULT 1,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );
         
@@ -42,6 +43,7 @@ class Database {
             adresse TEXT NOT NULL,
             latitude REAL,
             longitude REAL,
+            active INTEGER DEFAULT 1,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );
         
@@ -50,6 +52,8 @@ class Database {
             utilisateur_id INTEGER NOT NULL,
             station_id INTEGER NOT NULL,
             quantite INTEGER NOT NULL,
+            prix_bouteilles DECIMAL(10,2) NOT NULL,
+            frais_livraison DECIMAL(10,2) DEFAULT 0,
             prix_total DECIMAL(10,2) NOT NULL,
             statut VARCHAR(50) DEFAULT 'en_attente',
             adresse_livraison TEXT NOT NULL,
@@ -57,6 +61,7 @@ class Database {
             longitude_livraison REAL NOT NULL,
             distance_km REAL NOT NULL,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
             FOREIGN KEY (station_id) REFERENCES stations(id)
         );

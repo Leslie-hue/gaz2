@@ -1,11 +1,11 @@
 {
-  "name": "GazLivraison - Commande de Gaz à Domicile",
-  "short_name": "GazLivraison",
-  "description": "Application de commande et livraison de gaz de cuisine à domicile",
+  "name": "GazCameroun - Livraison de Gaz Domestique",
+  "short_name": "GazCameroun",
+  "description": "Application de commande et livraison de gaz domestique au Cameroun",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2563EB",
-  "theme_color": "#2563EB",
+  "background_color": "#059669",
+  "theme_color": "#059669",
   "orientation": "portrait-primary",
   "icons": [
     {
